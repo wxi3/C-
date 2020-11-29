@@ -1,0 +1,20 @@
+#include "stdio.h"
+int main(){
+    int x,t,s,k,i;
+    for(k=s=0,x=101;x<1000;x+=2){
+        for(i=3;i*i<=x;i+=2)
+      if(!(x%i))//如果x除i余数等于0 则退出
+                break;
+        if(i*i>x && (t=x%10*100+x/10%10*10+x/100)&1){
+            for(i=3;i*i<=t;i+=2)
+                if(!(t%i))
+                    break;
+            if(i*i>t && x-t){
+                printf( "%d <--> %d\n",x,t);
+                s++;
+            }
+        }
+    }
+    printf("\nA total of %d phantom primes.\n",s);
+    return 0;
+}
