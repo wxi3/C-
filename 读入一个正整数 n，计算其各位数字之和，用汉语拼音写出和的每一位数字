@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int PrintRever(int n)
+{
+	int i=0,sum=0,j;
+	int dog[100];
+	do
+	{
+		dog[i]=n%10;
+		n/=10;
+		j=dog[i];
+		sum+=j;
+		i++;
+	}while (n!=0);
+	
+	return sum;
+}
+
+
+
+int main()
+{
+	int num,sum,n,ge,shi,i,j;
+
+	char str[][10]={"ling","yi","er","san","si","wu","liu","qi","ba","jiu"};
+	printf("Please input a number:\n");
+	scanf("%d",&num);
+	n=PrintRever(num);
+	ge=n%10;
+	shi=n/10;
+	
+	printf("%d,%d\n",shi,ge);
+	
+	printf("%s %s",str[shi],str[ge]);
+    
+	
+	return 0;
+
+
+}
