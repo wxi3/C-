@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char strs[20],x,i,*p;
+	int j=0,k=0;
+	printf("please input a string:\n");
+	gets(strs);
+	printf("please input a char:\n");
+	x=getchar();
+	p=strs;
+	
+	while(*(p+j)!='\0')
+	{
+		if(*(p+j)==x)
+			k++;
+		j++;
+
+
+	}
+	
+	printf("There were times:%d\n",k);
+
+}
